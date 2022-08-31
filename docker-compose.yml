@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+
+  api-skeleton:
+    container_name: api-skeleton
+
+    volumes:
+      - ./logs/all.log:/api-skeleton/logs/all.log
+      - ./brain/models/:/api-skeleton/brain/models/
+    ports:
+      - 3000:3000
+    build:
+      context: ./
+    restart: unless-stopped
+    environment:
+      - INSIDE_DOCKER=wahoo
+
+  caddy:
+       container_name: caddy-server
+       image: caddy/caddy:2.5.1-alpine
+       restart: unless-stopped
+       ports:
+         - "80:80"
+         - "443:443"
+       volumes:
+         - ./Caddyfile:/etc/caddy/Caddyfile
+         - './:/srv'

@@ -1,0 +1,51 @@
+{
+  "name": "api-skeleton",
+  "version": "1.0.0",
+  "description": " todo: You API description ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "help": "echo \"(npm run model:build -- <arg>) to run model against a language (arg)\"",
+    "model:build": "node brain/build_models.js",
+    "build": "curl https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt > src/routes/middlewares/ipsum.txt",
+    "test": "node test/functional.js",
+    "test: tap": "tap --no-coverage"
+  },
+  "dependencies": {
+    "@fastify/mongodb": "^6.0.1",
+    "@fastify/static": "^6.5.0",
+    "@fastify/swagger": "^7.4.1",
+    "@fastify/view": "^7.0.0",
+    "annoy": "^3.0.3",
+    "async-mutex": "^0.3.2",
+    "dotenv": "^16.0.1",
+    "eta": "^1.12.3",
+    "fastify": "^4.3.0",
+    "fluent-json-schema": "^3.1.0",
+    "follow-redirects": "^1.15.1",
+    "nanoid": "^4.0.0",
+    "object-hash": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.6.4"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bacloud22/api-skeleton.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "nlp",
+    "annoy"
+  ],
+  "author": "bacloud14@gmail.com",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/bacloud22/api-skeleton/issues"
+  },
+  "homepage": "https://github.com/bacloud22/api-skeleton#readme"
+}
