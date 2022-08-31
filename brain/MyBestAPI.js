@@ -101,8 +101,8 @@ const api = function (languages, app) {
 
     return response;
   };
-
-  this.api1 = async function (params) {
+  // Dummy API2
+  this.api2 = async function (params) {
     const response = api2Response();
     response.input = params;
     response.input_hash = hash(response.input);
